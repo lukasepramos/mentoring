@@ -1,0 +1,22 @@
+{
+  "questao": {
+    "1": {
+      "enunciado": "blablabla",
+      "alternativas": {
+        "a": "Brasil",
+        "b": "Argentina",
+        "c": "Espanha",
+        "d": "Portugal"
+      }
+    },
+    "2": {
+      "enunciado": "blablabla2",
+      "alternativas": {
+        "a": "Gol",
+        "b": "Trave",
+        "c": "Meio de Campo",
+        "d": "Area"
+      }
+    }
+  }
+}
