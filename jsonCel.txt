@@ -1,7 +1,8 @@
 {
-  "questao": {
-    "1": {
-      "enunciado": "blablabla",
+  "questao": [
+    {
+      "num": 1,
+      "enunciado": "Qual o Pais do futebol?",
       "alternativas": {
         "a": "Brasil",
         "b": "Argentina",
@@ -9,8 +10,9 @@
         "d": "Portugal"
       }
     },
-    "2": {
-      "enunciado": "blablabla2",
+    {
+      "num" : 2,
+      "enunciado": "Onde o goleiro Fica?",
       "alternativas": {
         "a": "Gol",
         "b": "Trave",
@@ -18,5 +20,5 @@
         "d": "Area"
       }
     }
+  ]
   }
-}
