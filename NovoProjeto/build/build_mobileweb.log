@@ -1,0 +1,42 @@
+
+2016-06-03 16:07:53
+
+Operating System
+  Name                        = Microsoft Windows 10 Pro
+  Version                     = 10.0.10586
+  Architecture                = 32bit
+  # CPUs                      = 4
+  Memory                      = 8524890112
+
+Node.js
+  Node.js Version             = 0.12.7
+  npm Version                 = 2.11.3
+
+Titanium CLI
+  CLI Version                 = 5.0.6
+
+Titanium SDK
+  SDK Version                 = 5.2.2.GA
+  SDK Path                    = C:\ProgramData\Titanium\mobilesdk\win32\5.2.2.GA
+  Target Platform             = mobileweb
+
+Command
+  C:\Program Files (x86)\nodejs\node.exe C:\Users\Lukas\.appcelerator\install\5.2.2\package\node_modules\titanium\lib\titanium.js build run --platform mobileweb --log-level trace --sdk 5.2.2.GA --project-dir C:\Users\Lukas\Documents\Appcelerator_Studio_Workspace\NovoProjeto --deploy-type development --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 64631 --username lukasepramos@hotmail.com --password Sakul93041193 --config-file C:\Users\Lukas\AppData\Local\Temp\build-1464980868393.json --no-banner --project-dir C:\Users\Lukas\Documents\Appcelerator_Studio_Workspace\NovoProjeto
+
+[DEBUG]  Detecting modules in C:\ProgramData\Titanium\modules
+[DEBUG]  Detected android module: facebook 5.0.0 @ C:\ProgramData\Titanium\modules\android\facebook\5.0.0
+[DEBUG]  Detected android module: ti.cloudpush 3.4.1 @ C:\ProgramData\Titanium\modules\android\ti.cloudpush\3.4.1
+[DEBUG]  Detected android module: ti.map 2.3.6 @ C:\ProgramData\Titanium\modules\android\ti.map\2.3.6
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.10 @ C:\ProgramData\Titanium\modules\commonjs\ti.cloud\3.2.10
+[DEBUG]  Looking for Titanium module id=ti.cloud version=latest platform=commonjs deploy-type=development
+[INFO]   Found Titanium module id=ti.cloud version=3.2.10 platform=commonjs deploy-type=development path=C:\ProgramData\Titanium\modules\commonjs\ti.cloud\3.2.10
+[DEBUG]  No project level plugins to load
+[TRACE]  Snapshotting build directory
+[INFO]   Compiling "development" build
+[INFO]   Reading Titanium Mobile Web package.json file
+[INFO]   Validating theme
+[DEBUG]  Using default theme
+[TRACE]  offline build file C:\Users\Lukas\AppData\Local\Temp\build-a0f68b4208d9e7c9b08a4d13ebb65de1fb985759.json
+[TRACE]  online 1
+[TRACE]  sending request {"json":{"username":"lukasepramos@hotmail.com","session":"9e799b311e5d11972049661c5dccf495faccb28d iwIfFj9C6a5gRbftcee5GqEzwQFQXuhN0j4L9KVRSylPKwxGHEw8xOIZX+mOnVv3a+ZTt4aSUpclf6dYXnevfPrSfXsvoe5dPlaiRSYgW9Fr+vCsxrrmoXPm1Txn9Ud0gRiHGzlqlh+XGDuyF60iTx6UKLnP4ZGoaO3iixFO3l1mf6dqICF3r0C2wwcjHWgi8UASugybiuiFTAaxFApNVjN0iEYdG4X33YIN9xvWdAC8KFSuOsFRDrQxVe6FhBTn3RKFoe2Pw1AI2zBalJS9kF5Jzbu+EwraOtsJ56gKOLTcEIubjKUdZEmWRep2/wup/V03Ju9J5Vb7NnLq/OTR8ooojrp6kaoTqChVf8ATdi6o0O8q/Uolu+K5+/mlPlT4RYGPhGbQgB1Kbz0oL9KjxCHMUGW/u0UpO02RBg5MV3J3Mc0jxIUIkYOenU9prbwd/ATE8pHyMmjIDjQKIuehNzdjYNq4apIO4mYoTOz98xfTp8fVhnFFfMQ9xJzkmAkW6jRJizxwxF5DHdIGKohWJU4wUEWALAB8ECu3S0BUKn0YPEflRl3B8K/2fIRtJsLmWz9+uu6XVIdHQwmhN3XvRRKUTQ434xn2MvhJQGZThsYNpBtYXsK+4sR2xyv9I889Jz4RXch1B8CxfIidwZXRRA5kqieQGbeQ+8K9tmUB4FmXvUHRumTP8i2Nh9ts44cc1/R1tD6ZfZ5elmxeZdFdEuYaYuqd/ej7pBXL+5gPT8R81orS2Ry5UNuvoGCihCE9yGVR/dRakmAdoaDAkZRPOxzxG3Z3pgKk5llRN7iufCQ=","ipaddress":"192.168.0.33","fingerprint":"abaf89c73f4afa98ac4e6754d702fdaced21bc12","fingerprint_description":"Windows Machine ID: 57520cbd-abaf-4755-bd83-679d1537599b","guid":"99fd7c05-6468-40d6-9777-349c6a753ef2","appid":"com.amaxnet.app01","name":"NovoProjeto","org_id":100109396,"deploytype":"development","tiappxml":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ti:app \n  xmlns:ti=\"http://ti.appcelerator.org\">\n  <id>com.amaxnet.app01</id>\n  <name>NovoProjeto</name>\n  <version>1.0</version>\n  <publisher>Lukas</publisher>\n  <url/>\n  <description/>\n  <copyright>2016 by Lukas</copyright>\n  <icon>appicon.png</icon>\n  <fullscreen>false</fullscreen>\n  <navbar-hidden>false</navbar-hidden>\n  <analytics>true</analytics>\n  <guid>99fd7c05-6468-40d6-9777-349c6a753ef2</guid>\n  <property name=\"ti.ui.defaultunit\" type=\"string\">dp</property>\n  <ios>\n    <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>\n    <plist>\n      <dict>\n        <key>UISupportedInterfaceOrientations~iphone</key>\n        <array>\n          <string>UIInterfaceOrientationPortrait</string>\n        </array>\n        <key>UISupportedInterfaceOrientations~ipad</key>\n        <array>\n          <string>UIInterfaceOrientationPortrait</string>\n          <string>UIInterfaceOrientationPortraitUpsideDown</string>\n          <string>UIInterfaceOrientationLandscapeLeft</string>\n          <string>UIInterfaceOrientationLandscapeRight</string>\n        </array>\n        <key>UIRequiresPersistentWiFi</key>\n        <false/>\n        <key>UIPrerenderedIcon</key>\n        <false/>\n        <key>UIStatusBarHidden</key>\n        <false/>\n        <key>UIStatusBarStyle</key>\n        <string>UIStatusBarStyleDefault</string>\n      </dict>\n    </plist>\n  </ios>\n  <android \n    xmlns:android=\"http://schemas.android.com/apk/res/android\"/>\n    <mobileweb>\n      <precache/>\n      <splash>\n        <enabled>true</enabled>\n        <inline-css-images>true</inline-css-images>\n      </splash>\n      <theme>default</theme>\n    </mobileweb>\n    <modules>\n      <module platform=\"commonjs\">ti.cloud</module>\n    </modules>\n    <deployment-targets>\n      <target device=\"iphone\">false</target>\n      <target device=\"ipad\">false</target>\n      <target device=\"android\">true</target>\n      <target device=\"mobileweb\">true</target>\n      <target device=\"windows\">false</target>\n    </deployment-targets>\n    <sdk-version>5.2.2.GA</sdk-version>\n    <property name=\"appc-app-id\" type=\"string\">57488b222b876e477d5cef3b</property>\n    <property name=\"acs-authbase-url-development\" type=\"string\">***</property>\n    <property name=\"acs-base-url-development\" type=\"string\">***</property>\n    <property name=\"acs-oauth-secret-development\" type=\"string\">***</property>\n    <property name=\"acs-oauth-key-development\" type=\"string\">***</property>\n    <property name=\"acs-api-key-development\" type=\"string\">***</property>\n    <property name=\"acs-username-development\" type=\"string\">***</property>\n    <property name=\"acs-password-development\" type=\"string\">***</property>\n    <property name=\"acs-authbase-url-production\" type=\"string\">***</property>\n    <property name=\"acs-base-url-production\" type=\"string\">***</property>\n    <property name=\"acs-oauth-secret-production\" type=\"string\">***</property>\n    <property name=\"acs-oauth-key-production\" type=\"string\">***</property>\n    <property name=\"acs-api-key-production\" type=\"string\">***</property>\n    <property name=\"acs-username-production\" type=\"string\">***</property>\n    <property name=\"acs-password-production\" type=\"string\">***</property>\n    <property name=\"appc-org-id\" type=\"string\">100109396</property>\n    <property name=\"appc-creator-user-id\" type=\"string\">d830e65d-346d-48f8-97bb-ee39e5323ec2</property>\n  </ti:app>","modules":[{"id":"ti.cloud","platform":["commonjs"],"deployType":["development"],"modulePath":"C:\\ProgramData\\Titanium\\modules\\commonjs\\ti.cloud\\3.2.10","version":"3.2.10","manifest":{"version":"3.2.10","description":"Appcelerator Cloud Services","author":"Dawson Toth, Jeff English, Jon Alter, Paul Lv, Michael Goff, and Pedro Enrique","license":"Appcelerator Commercial License","copyright":"Copyright (c) 2011-2014 by Appcelerator,  Inc.","name":"ti.cloud","moduleid":"ti.cloud","guid":"1056b5d2-2bb5-4339-b930-297637aeec4e","platform":"commonjs","minsdk":"2.1.0"}}]},"gzip":true,"followAllRedirects":true,"url":"https://security.appcelerator.com/build-verify"}
+[TRACE]  result from /build-verify=> {"key":"LmVtaHEN0OHexXY+TbPVZg==","pepper":"D3vqf7h82IK7IQ1GNjY7Rg==","hmacKey":"8MeOEGKRftHoULaC7yWAiQ==","o":100109396,"u":"d830e65d-346d-48f8-97bb-ee39e5323ec2","p":"free","i":"5751d58adb4be20912182754","success":true}, err=null

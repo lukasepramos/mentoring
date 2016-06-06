@@ -1,0 +1,8 @@
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/android/support/v7/appcompat/R.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/android/support/v7/cardview/R.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/com/amaxnet/app01/AssetCryptImpl.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/com/amaxnet/app01/NovoprojetoActivity.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/com/amaxnet/app01/NovoprojetoAppInfo.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/com/amaxnet/app01/NovoprojetoApplication.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/com/amaxnet/app01/R.java"
+"C:/Users/Lukas/Documents/Appcelerator_Studio_Workspace/NovoProjeto/build/android/gen/ti/modules/titanium/ui/R.java"

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.amaxnet.app01</id>
+    <name>NovoProjeto</name>
+    <version>1.0</version>
+    <publisher>Lukas</publisher>
+    <url/>
+    <description/>
+    <copyright>2016 by Lukas</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>99fd7c05-6468-40d6-9777-349c6a753ef2</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs">ti.cloud</module>
+    </modules>
+    <deployment-targets>
+        <target device="iphone">false</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="mobileweb">true</target>
+        <target device="windows">false</target>
+    </deployment-targets>
+    <sdk-version>5.2.2.GA</sdk-version>
+    <property name="appc-app-id" type="string">57488b222b876e477d5cef3b</property>
+    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-development" type="string">O9XLzvW6KLCBLA3TuMLErQq8tDf1jHB0</property>
+    <property name="acs-oauth-key-development" type="string">poT9kT7KB3CLGcyeyk9dMpQYNw1Rxger</property>
+    <property name="acs-api-key-development" type="string">epwoYJfgd7pVL01PMZADyJIlMzbgsrTX</property>
+    <property name="acs-username-development" type="string">appc_app_user_dev</property>
+    <property name="acs-password-development" type="string">834NSQh5qmZ2dUqtJx</property>
+    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-oauth-secret-production" type="string">JjHCng76UUbNK6VM5NBmBXRdItBO95wM</property>
+    <property name="acs-oauth-key-production" type="string">UJFMUcITSrbYaxwfDuj8T5e6or8Y6g14</property>
+    <property name="acs-api-key-production" type="string">XxqlzYpUqeIDZVbiE9L38qh7zYvE87LC</property>
+    <property name="acs-username-production" type="string">appc_app_user</property>
+    <property name="acs-password-production" type="string">xQaQG4cYz8OHByhM2z</property>
+    <property name="appc-org-id" type="string">100109396</property>
+    <property name="appc-creator-user-id" type="string">d830e65d-346d-48f8-97bb-ee39e5323ec2</property>
+</ti:app>
