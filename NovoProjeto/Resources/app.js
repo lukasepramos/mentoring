@@ -26,7 +26,7 @@ vPrimeira = Titanium.UI.createView({
     borderRadius: 15
 });
 
-var vPadrao = Titanium.UI.createView({
+vPadrao = Titanium.UI.createView({
 	height:'auto',
     width:'auto',
     layout: "horizontal",
