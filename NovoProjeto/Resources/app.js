@@ -1,7 +1,9 @@
-var i,j;
-var lNum, lEnum;
+var i=0,acertos=0;
+var lNum, lEnum,lResutado;
 var bResp1, bResp2, bResp3, bResp4;
 var questao;
+//funcao
+var fUpdate;
 
 //Cria a window main
 var wMain = Titanium.UI.createWindow({
@@ -42,8 +44,40 @@ var bEntrar = Titanium.UI.createButton({
 });
 bEntrar.addEventListener('click',function(e)
 {
-   	for(i=0; i<json.questao.length;i++){
-	   	questao = json.questao[i];
+	fUpdate();
+});
+
+//View para entrada com JSon
+
+var vPadrao = Titanium.UI.createView({
+	height:'auto',
+    width:'auto',
+    layout: "horizontal",
+    backgroundColor:'black',
+    top:5,
+    left:5,
+    right:5,
+	bottom:5,
+	borderRadius: 15
+});
+
+var vFinal = Titanium.UI.createView({
+	height:'auto',
+    width:'auto',
+    layout: "horizontal",
+    backgroundColor:'black',
+    top:5,
+    left:5,
+    right:5,
+	bottom:5,
+	borderRadius: 15
+});
+
+//definindo a função
+fUpdate = function(){
+	if(i<json.questao.length)
+	{
+		questao = json.questao[i];
 		lNum = Titanium.UI.createLabel({
 	   		font: {fontSize: 18},
 			top:10,
@@ -70,12 +104,16 @@ bEntrar.addEventListener('click',function(e)
 			if(questao.alternativas.a==questao.resposta)
 			{
 				alert('Correto');
+				acertos++;
 			}
 			else
 			{
 				alert('Errado');
 			}
+			i++;
+			//setTimeout(function(){},30000);
 			vPadrao.removeAllChildren();
+			fUpdate();
 		});
 		bResp2 = Titanium.UI.createButton({
 			title: questao.alternativas.b,
@@ -88,12 +126,16 @@ bEntrar.addEventListener('click',function(e)
 			if(questao.alternativas.b==questao.resposta)
 			{
 				alert('Correto');
+				acertos++;
 			}
 			else
 			{
 				alert('Errado');
 			}
+			i++;
+			//setTimeout(function(){},3000);
 			vPadrao.removeAllChildren();
+			fUpdate();
 		});
 		bResp3 = Titanium.UI.createButton({
 			title: questao.alternativas.c,
@@ -106,12 +148,16 @@ bEntrar.addEventListener('click',function(e)
 			if(questao.alternativas.c==questao.resposta)
 			{
 				alert('Correto');
+				acertos++;
 			}
 			else
 			{
 				alert('Errado');
 			}
+			i++;
+			//setTimeout(function(){},3000);
 			vPadrao.removeAllChildren();
+			fUpdate();
 		});
 		bResp4 = Titanium.UI.createButton({
 			title: questao.alternativas.d,
@@ -124,12 +170,16 @@ bEntrar.addEventListener('click',function(e)
 			if(questao.alternativas.d==questao.resposta)
 			{
 				alert('Correto');
+				acertos++;
 			}
 			else
 			{
 				alert('Errado');
 			}
+			i++;
+			//setTimeout(function(){},3000);
 			vPadrao.removeAllChildren();
+			fUpdate();
 		});
 		vPadrao.add(lNum);
 	   	vPadrao.add(lEnum);
@@ -138,22 +188,22 @@ bEntrar.addEventListener('click',function(e)
 	   	vPadrao.add(bResp3);
 	   	vPadrao.add(bResp4);
 	   	wMain.add(vPadrao);
-   	}
-});
+	}
+	else
+	{
+		lResutado = Titanium.UI.createLabel({
+	   		font: {fontSize: 18},
+			width: "100%",
+			text: "Acertou: " + acertos,
+			color: 'white',
+			verticalAlign: 'center'
+		});
+		vFinal.add(lResutado);
+		wMain.add(vFinal);
+	}
+   	
+};
 
-//View para entrada com JSon
-
-var vPadrao = Titanium.UI.createView({
-	height:'auto',
-    width:'auto',
-    layout: "horizontal",
-    backgroundColor:'black',
-    top:5,
-    left:5,
-    right:5,
-	bottom:5,
-	borderRadius: 15
-});
 
 //Entrada do JSON
 var url = "https://raw.githubusercontent.com/lukasepramos/mentoring/master/jsonCel.txt"; //Criar url com json
