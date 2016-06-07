@@ -8,7 +8,8 @@
         "b": "Argentina",
         "c": "Espanha",
         "d": "Portugal"
-      }
+      },
+      "resposta" : "Brasil"
     },
     {
       "num" : 2,
@@ -17,8 +18,9 @@
         "a": "Gol",
         "b": "Trave",
         "c": "Meio de Campo",
-        "d": "Area"
-      }
+        "d": "Rede"
+      },
+      "resposta" : "Gol"
     }
   ]
   }
