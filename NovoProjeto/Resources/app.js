@@ -1,31 +1,46 @@
 var i=0,acertos=0;
-var lNum, lEnum,lResutado;
+var lNum, lEnum, lResutado, lBemVindo;
 var bResp1, bResp2, bResp3, bResp4;
-var questao;
-//funcao
+var questao,json,url,xhr;
+var wMain;
+var vPrimeira, vPadrao, vFinal;
 var fUpdate;
 
-//Cria a window main
-var wMain = Titanium.UI.createWindow({
+//window
+wMain = Titanium.UI.createWindow({
 width: 'auto',
 height: 'auto',
 backgroundColor: 'white',
 title: 'Quizz'
 });
 
-//Cria a primeira view
-var vPrimeira = Titanium.UI.createView({
+//Views
+vPrimeira = Titanium.UI.createView({
     height:'auto',
     width:'auto',
     backgroundColor:'black',
     top:5,
     left:5,
     right:5,
-	bottom:5
+	  bottom:5,
+    borderRadius: 15
 });
 
+var vPadrao = Titanium.UI.createView({
+	height:'auto',
+    width:'auto',
+    layout: "horizontal",
+    backgroundColor:'black',
+    top:5,
+    left:5,
+    right:5,
+	  bottom:5,
+	  borderRadius: 15
+});
+
+
 //cria a label de entrada
-var lBemVindo = Titanium.UI.createLabel({
+lBemVindo = Titanium.UI.createLabel({
 font: {fontSize: 14, fontFamily: 'Helvetica',
 fontWeight:'bold'},
 top:5,
@@ -35,7 +50,7 @@ color: 'white'
 });
 
 //Cria o botao de entrada que vai chamar outra view.
-var bEntrar = Titanium.UI.createButton({
+bEntrar = Titanium.UI.createButton({
    title: 'Entrar',
    top: 400,
    width: 100,
@@ -69,8 +84,8 @@ var vFinal = Titanium.UI.createView({
     top:5,
     left:5,
     right:5,
-	bottom:5,
-	borderRadius: 15
+	  bottom:5,
+	  borderRadius: 15
 });
 
 //definindo a função
@@ -79,7 +94,7 @@ fUpdate = function(){
 	{
 		questao = json.questao[i];
 		lNum = Titanium.UI.createLabel({
-	   		font: {fontSize: 18},
+	   	font: {fontSize: 18},
 			top:10,
 			width: "100%",
 			text: "Questão Numero: " + questao.num + "\n",
@@ -87,7 +102,7 @@ fUpdate = function(){
 			verticalAlign: 'center'
 		});
 		lEnum = Titanium.UI.createLabel({
-	   		font: {fontSize: 16},
+	   	font: {fontSize: 16},
 			text: questao.enunciado,
 			letf: 10,
 			color: 'white'
@@ -111,8 +126,7 @@ fUpdate = function(){
 				alert('Errado');
 			}
 			i++;
-			//setTimeout(function(){},30000);
-			vPadrao.removeAllChildren();
+      vPadrao.removeAllChildren();
 			fUpdate();
 		});
 		bResp2 = Titanium.UI.createButton({
@@ -133,7 +147,6 @@ fUpdate = function(){
 				alert('Errado');
 			}
 			i++;
-			//setTimeout(function(){},3000);
 			vPadrao.removeAllChildren();
 			fUpdate();
 		});
@@ -155,7 +168,6 @@ fUpdate = function(){
 				alert('Errado');
 			}
 			i++;
-			//setTimeout(function(){},3000);
 			vPadrao.removeAllChildren();
 			fUpdate();
 		});
@@ -177,11 +189,10 @@ fUpdate = function(){
 				alert('Errado');
 			}
 			i++;
-			//setTimeout(function(){},3000);
 			vPadrao.removeAllChildren();
 			fUpdate();
 		});
-		vPadrao.add(lNum);
+		  vPadrao.add(lNum);
 	   	vPadrao.add(lEnum);
 	   	vPadrao.add(bResp1);
 	   	vPadrao.add(bResp2);
@@ -201,16 +212,16 @@ fUpdate = function(){
 		vFinal.add(lResutado);
 		wMain.add(vFinal);
 	}
-   	
+
 };
 
 
 //Entrada do JSON
-var url = "https://raw.githubusercontent.com/lukasepramos/mentoring/master/jsonCel.txt"; //Criar url com json
-var json;
-var xhr = Ti.Network.createHTTPClient({
+url = "https://raw.githubusercontent.com/lukasepramos/mentoring/master/jsonCel.txt"; //Criar url com json
+json;
+xhr = Ti.Network.createHTTPClient({
     onload: function() {
-    json = JSON.parse(this.responseText);    
+    json = JSON.parse(this.responseText);
     },
     onerror: function(e) {
 	Ti.API.debug("STATUS: " + this.status);
