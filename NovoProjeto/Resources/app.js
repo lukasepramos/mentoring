@@ -1,3 +1,8 @@
+var i,j;
+var lNum, lEnum;
+var bResp1, bResp2, bResp3, bResp4;
+var questao;
+
 //Cria a window main
 var wMain = Titanium.UI.createWindow({
 width: 'auto',
@@ -14,7 +19,7 @@ var vPrimeira = Titanium.UI.createView({
     top:5,
     left:5,
     right:5,
-	  bottom:5
+	bottom:5
 });
 
 //cria a label de entrada
@@ -37,18 +42,137 @@ var bEntrar = Titanium.UI.createButton({
 });
 bEntrar.addEventListener('click',function(e)
 {
-   Titanium.UI.createView({
+   	for(i=0; i<json.questao.length;i++){
+	   	questao = json.questao[i];
+		lNum = Titanium.UI.createLabel({
+	   		font: {fontSize: 18},
+			top:10,
+			width: "100%",
+			text: "Questão Numero: " + questao.num + "\n",
+			color: 'white',
+			verticalAlign: 'center'
+		});
+		lEnum = Titanium.UI.createLabel({
+	   		font: {fontSize: 16},
+			text: questao.enunciado,
+			letf: 10,
+			color: 'white'
+		});
+		bResp1 = Titanium.UI.createButton({
+			title: questao.alternativas.a,
+	   		top: 200,
+	   		width: "100%",
+	   		height: "auto",
+	   		verticalAlign: 'center'
+		});
+		bResp1.addEventListener('click',function(e)
+		{
+			if(questao.alternativas.a==questao.resposta)
+			{
+				alert('Correto');
+			}
+			else
+			{
+				alert('Errado');
+			}
+			vPadrao.removeAllChildren();
+		});
+		bResp2 = Titanium.UI.createButton({
+			title: questao.alternativas.b,
+	   		width: "100%",
+	   		height: "auto",
+	   		verticalAlign: 'center'
+		});
+		bResp2.addEventListener('click',function(e)
+		{
+			if(questao.alternativas.b==questao.resposta)
+			{
+				alert('Correto');
+			}
+			else
+			{
+				alert('Errado');
+			}
+			vPadrao.removeAllChildren();
+		});
+		bResp3 = Titanium.UI.createButton({
+			title: questao.alternativas.c,
+	   		width: "100%",
+	   		height: "auto",
+	   		verticalAlign: 'center'
+		});
+		bResp3.addEventListener('click',function(e)
+		{
+			if(questao.alternativas.c==questao.resposta)
+			{
+				alert('Correto');
+			}
+			else
+			{
+				alert('Errado');
+			}
+			vPadrao.removeAllChildren();
+		});
+		bResp4 = Titanium.UI.createButton({
+			title: questao.alternativas.d,
+	   		width: "100%",
+	   		height: "auto",
+	   		verticalAlign: 'center'
+		});
+		bResp4.addEventListener('click',function(e)
+		{
+			if(questao.alternativas.d==questao.resposta)
+			{
+				alert('Correto');
+			}
+			else
+			{
+				alert('Errado');
+			}
+			vPadrao.removeAllChildren();
+		});
+		vPadrao.add(lNum);
+	   	vPadrao.add(lEnum);
+	   	vPadrao.add(bResp1);
+	   	vPadrao.add(bResp2);
+	   	vPadrao.add(bResp3);
+	   	vPadrao.add(bResp4);
+	   	wMain.add(vPadrao);
+   	}
+});
 
+//View para entrada com JSon
 
-   })
+var vPadrao = Titanium.UI.createView({
+	height:'auto',
+    width:'auto',
+    layout: "horizontal",
+    backgroundColor:'black',
+    top:5,
+    left:5,
+    right:5,
+	bottom:5,
+	borderRadius: 15
 });
 
 //Entrada do JSON
-var url = "https://raw.githubusercontent.com/lukasepramos/mentoring/master/jsonCel.txt";
+var url = "https://raw.githubusercontent.com/lukasepramos/mentoring/master/jsonCel.txt"; //Criar url com json
+var json;
+var xhr = Ti.Network.createHTTPClient({
+    onload: function() {
+    json = JSON.parse(this.responseText);    
+    },
+    onerror: function(e) {
+	Ti.API.debug("STATUS: " + this.status);
+	Ti.API.debug("TEXT:   " + this.responseText);
+	Ti.API.debug("ERROR:  " + e.error);
+	alert('There was an error retrieving the remote data. Try again.');
+    },
+    timeout:5000
+});
 
-
-
-
+xhr.open("GET", url);
+xhr.send();
 vPrimeira.add(lBemVindo);
 wMain.add(vPrimeira);
 vPrimeira.add(bEntrar);
